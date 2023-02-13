@@ -9,34 +9,56 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet">
 
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <title>Document</title>
 </head>
 <body>
- <div class="all">
-   <!-- link to authorization -->
-   <a href="#" class="to_log_btn">Log in</a>   
-  
-   <!-- log out button -->
-   <a href="#" class="log_out_btn">Log out</a>
- 
-   
+<div>
+  <p></br></p>
+</div>
+<div class="links">
+  <!-- link to authorization -->
+  <a href="#" class="to_log_btn">Log in</a>   
+
+  <!-- log out button -->
+  <a href="#" class="log_out_btn">Log out</a>
+  <br>
+</div>
+
+ <div class="all_forms">
    <!-- login form -->
    <div class="login_form">
      <h1 class="login_form_header">Log in</h1>
      <form action="">
-       <label for="auth_log">Login</label>
-       <input type="email" id="auth_log" minlength="9" required placeholder="Enter your email" pattern="[^ а-яёА-ЯЁ]+">
+
+      <div class="data_writer">
+          <div class="labels">
+            <label class="lb" for="auth_log">Login</label>
+            <br>
+            <label class="lb" for="auth_pwd">Password</label>
+          </div>
+
+          <div class="fields">
+            <input type="email" id="auth_log" minlength="9" required placeholder="Enter your email" pattern="[^ а-яёА-ЯЁ]+">       
+            <br>
+            <input type="password" id="auth_pwd" minlength="8" maxlength="30" required placeholder="Enter password" pattern="[^ а-яёА-ЯЁ`~!#$;:\|/,+=]+">
+          </div>
+      </div>
+
        <br>
-       <label for="auth_pwd">Password</label>
-       <input type="password" id="auth_pwd" minlength="8" maxlength="30" required placeholder="Enter password" pattern="[^ а-яёА-ЯЁ`~!#$;:\|/,+=]+">
+       <div class="form_btns">
+          <input type="submit" value="Log in" class="log_in_btn">
+          <input type="reset" value="Cancel" class="cancel">
+       </div>
        <br>
-       <input type="submit" value="Log in" class="log_in_btn">
-       <input type="reset" value="Cancel" class="cancel">
-       <br>
-       <input type="button" value="forgot password?" class="to_recovery_pwd">
-       <br>
-       <input type="button" value="touch me if haven't an account..." class="to_reg_btn">
+       <div class="other_btns">
+          <input type="button" value="forgot password?" class="to_recovery_pwd">
+          <br>
+          <input type="button" value="touch me if haven't an account..." class="to_reg_btn">
+       </div>
      </form>
    </div>
  
@@ -45,17 +67,28 @@
    <div class="registration_form">
      <h1 class="registration_form_header">Registration</h1>
      <form id="reg_form" action="">
-       <label for="reg_log">Login</label>
-       <input type="email" id="reg_log" required placeholder="Enter your email" pattern="[^ а-яёА-ЯЁ]+">
+       <div class="data_writer">
+          <div class="labels">
+            <label class="lb" for="reg_log">Login</label>
+            <br>
+            <label class="lb" for="reg_pwd">Password</label>
+            <br>
+            <label class="lb" for="key_code">Recovery code</label>
+          </div>
+
+          <div class="fields">
+            <input type="email" id="reg_log" required placeholder="Enter your email" pattern="[^ а-яёА-ЯЁ]+">
+            <br>
+            <input type="password" id="reg_pwd" minlength="8" maxlength="30" required placeholder="Enter password" pattern="[^ а-яёА-ЯЁ`~!#$;:\|/,+=]+">
+            <br>
+            <input type="text" id="key_code" minlength="4" maxlength="30" required placeholder="Recovery code for password">
+          </div>
+       </div>
        <br>
-       <label for="reg_pwd">Password</label>
-       <input type="password" id="reg_pwd" minlength="8" maxlength="30" required placeholder="Enter password" pattern="[^ а-яёА-ЯЁ`~!#$;:\|/,+=]+">
-       <br>
-       <label for="key_code">Recovery code</label>
-       <input type="text" id="key_code" minlength="4" maxlength="30" required placeholder="Enter code for recovery password"">
-       <br>
-       <input type="submit" value="Register" class="reg_btn">
-       <input type="reset" value="Cancel" class="cancel">
+       <div class="form_btns">
+          <input type="submit" value="Register" class="reg_btn">
+          <input type="reset" value="Cancel" class="cancel">
+       </div>
      </form>
    </div>
  
@@ -64,17 +97,28 @@
    <div class="recovery_form">
      <h1 class="recovery_form_header">Recovery password</h1>
      <form id="rec_form" action="">
-       <label for="log">Login</label>
-       <input type="email" id="log" required placeholder="Enter your email" pattern="[^ а-яёА-ЯЁ]+">
+      <div class="data_writer">
+        <div class="labels">
+          <label class="lb" for="log">Login</label>
+          <br>
+          <label class="lb" for="code">Recovery code</label>
+          <br>
+          <label class="lb" for="pwd">New password</label>
+       </div>
+
+       <div class="fields">
+          <input type="email" id="log" required placeholder="Enter your email" pattern="[^ а-яёА-ЯЁ]+">
+          <br>
+          <input type="text" id="code" minlength="4" maxlength="30" required placeholder="Enter recovery code"">
+          <br>
+          <input type="password" id="pwd" minlength="8" maxlength="30" required placeholder="Enter password" pattern="[^ а-яёА-ЯЁ`~!#$;:\|/,+=]+">
+       </div>
+      </div>
        <br>
-       <label for="code">Recovery code</label>
-       <input type="text" id="code" minlength="4" maxlength="30" required placeholder="Enter recovery code"">
-       <br>
-       <label for="pwd">New password</label>
-       <input type="password" id="pwd" minlength="8" maxlength="30" required placeholder="Enter password" pattern="[^ а-яёА-ЯЁ`~!#$;:\|/,+=]+">
-       <br>
-       <input type="submit" value="Recovery" class="recovery_btn">
-       <input type="reset" value="Cancel" class="cancel">
+       <div class="form_btns">
+          <input type="submit" value="Recovery" class="recovery_btn">
+          <input type="reset" value="Cancel" class="cancel">
+       </div>
      </form>
    </div>
  

@@ -1,13 +1,12 @@
-/* body{
-    background-color: #0a0a0a;
-} */
+.content{
+    padding-top: 100px;
+}
 
 
 .to_log_btn{
     width: 100px;
-    height: 50px;
     text-decoration: none;
-    background-color: #3A5AFF;
+    background-color: #8a8bca;
     color: #fff;
     padding: 20px;
     border-radius: 10px;
@@ -16,47 +15,12 @@
     font-weight: 800;
     font-size: 16px;
     line-height: 20px;
-    text-align: center;
 }
 
-.login_form {
-    display: none;
-    text-align: center;
-    margin-left: 25%;
-    margin-top: 25%;
-    width: 500px;
-    background-color: #8a8bca;
-    border-radius: 10px;
-    padding: 10px;
-}
-
-.registration_form {
-    display: none;
-    text-align: center;
-    margin-left: 25%;
-    margin-top: 25%;
-    width: 500px;
-    background-color: #8a8bca;
-    border-radius: 10px;
-    padding: 10px;
-    
-}
-
-.recovery_form{
-    display: none;
-    text-align: center;
-    margin-left: 25%;
-    margin-top: 25%;
-    width: 500px;
-    background-color: #8a8bca;
-    border-radius: 10px;
-    padding: 10px;
-}
 
 .log_out_btn{
     display: none;
     width: 100px;
-    height: 20px;
     text-decoration: none;
     color: #979797;
     border: 1px solid #979797;
@@ -67,8 +31,63 @@
     font-weight: 800;
     font-size: 16px;
     line-height: 20px;
+}
+
+.login_form, 
+.registration_form,
+.recovery_form{
+    display: none; 
     text-align: center;
-    padding-bottom: 10px;
+    margin-left: 25%;
+    margin-top: 25%;
+    width: 500px;
+    background-color: #8a8bca;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.data_writer{
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.labels{
+    text-align: left;
+    padding-left: 10%;
+}
+
+.fields{
+   padding-left: 5%;
+
+}
+
+#auth_log, 
+#auth_pwd,
+#reg_log,
+#reg_pwd,
+#key_code,
+#log,
+#code,
+#pwd{
+    border-radius: 8px;
+    border: 1px solid #000;
+    width: 100%;
+    height: 25px;
+    margin-bottom: 5px;
+}
+
+.lb{ 
+    display: inline-block;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    margin-bottom: 16px;
+    color: #FFF;
+
 }
 
 h1{
@@ -79,30 +98,10 @@ h1{
     line-height: 50px;
 
     text-align: center;
-    color: #2F281E;
+    color: #FFF;
 }
 
-label{
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 15px;
-    line-height: 20px;
-
-    text-align: left;
-    color: #2F281E;
-}
-
-
-.to_reg_btn{
-    background-color: transparent;
-    border: none;
-    cursor: pointer;
-    margin: 0;
-    padding: 0;
-    color: #001ea5;
-}
-
+.to_reg_btn,
 .to_recovery_pwd{
     background-color: transparent;
     border: none;
@@ -110,64 +109,28 @@ label{
     margin: 0;
     padding: 0;
     color: #001ea5;
-}
 
-.cancel{
-    cursor: pointer;
-    width: 100px;
-    height: 40px;
-    background-color: #3A5AFF;
-    border: none;
-    color: #fff;
-    padding: 2px;
-    border-radius: 10px;
     font-family: 'Montserrat';
     font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
+    font-weight: 700;
+    font-size: 12px;
 }
 
-.log_in_btn{
-    cursor: pointer;
-    width: 100px;
-    height: 40px;
-    background-color: #3A5AFF;
-    border: none;
-    color: #fff;
-    padding: 2px;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-    font-style: normal;
+.to_reg_btn:hover,
+.to_recovery_pwd:hover{
+    color: #000;
     font-weight: 800;
     font-size: 16px;
-    line-height: 20px;
-    text-align: center;
 }
 
-.reg_btn{
-    cursor: pointer;
-    width: 100px;
-    height: 40px;
-    background-color: #3A5AFF;
-    border: none;
-    color: #fff;
-    padding: 2px;
-    border-radius: 10px;
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 800;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-}
-
+.cancel,
+.log_in_btn,
+.reg_btn,
 .recovery_btn{
     cursor: pointer;
     width: 100px;
     height: 40px;
-    background-color: #3A5AFF;
+    background-color: #323235;
     border: none;
     color: #fff;
     padding: 2px;
@@ -178,4 +141,562 @@ label{
     font-size: 16px;
     line-height: 20px;
     text-align: center;
+}
+
+
+
+/* adaptive */
+@media (max-width:2000px){
+    .all_forms{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .links{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .to_log_btn{
+        margin: 0 auto;
+        border-radius: 8px;
+        background-color: #8a8bca;
+        width: 15px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .log_out_btn{
+        display: none;
+        width: 15px;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    
+    .login_form, 
+    .registration_form,
+    .recovery_form{
+        display: none; 
+        margin: 20px auto 10px 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #8a8bca;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    
+    .data_writer{
+        margin: 0 auto;
+        display: flexbox;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .labels{
+        text-align: left;
+        padding-left: 10%;
+    }
+    
+    .fields{
+       padding-left: 5%;
+    
+    }
+    
+    #auth_log, 
+    #auth_pwd,
+    #reg_log,
+    #reg_pwd,
+    #key_code,
+    #log,
+    #code,
+    #pwd{
+        border-radius: 8px;
+        border: 1px solid #000;
+        width: 170px;
+        height: 20px;
+        margin-bottom: 2,5px;
+    }
+    
+    .lb{ 
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 12px;
+        color: #FFF;
+    
+    }
+    
+    h1{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 50px;
+    
+        text-align: center;
+        color: #FFF;
+    }
+    
+    .to_reg_btn,
+    .to_recovery_pwd{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        color: #001ea5;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    .to_reg_btn:hover,
+    .to_recovery_pwd:hover{
+        color: #000;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    .cancel,
+    .log_in_btn,
+    .reg_btn,
+    .recovery_btn{
+        cursor: pointer;
+        width: 85px;
+        height: 35px;
+        background-color: #323235;
+        border: none;
+        color: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width:1400px){
+    .all_forms{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .links{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .to_log_btn{
+        margin: 0 auto;
+        border-radius: 8px;
+        background-color: #8a8bca;
+        width: 15px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .log_out_btn{
+        display: none;
+        width: 15px;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    
+    .login_form, 
+    .registration_form,
+    .recovery_form{
+        display: none; 
+        margin: 20px auto 10px 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #8a8bca;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    
+    .data_writer{
+        margin: 0 auto;
+        display: flexbox;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .labels{
+        text-align: left;
+        padding-left: 10%;
+    }
+    
+    .fields{
+       padding-left: 5%;
+    
+    }
+    
+    #auth_log, 
+    #auth_pwd,
+    #reg_log,
+    #reg_pwd,
+    #key_code,
+    #log,
+    #code,
+    #pwd{
+        border-radius: 8px;
+        border: 1px solid #000;
+        width: 170px;
+        height: 20px;
+        margin-bottom: 2,5px;
+    }
+    
+    .lb{ 
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 12px;
+        color: #FFF;
+    
+    }
+    
+    h1{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 50px;
+    
+        text-align: center;
+        color: #FFF;
+    }
+    
+    .to_reg_btn,
+    .to_recovery_pwd{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        color: #001ea5;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    .to_reg_btn:hover,
+    .to_recovery_pwd:hover{
+        color: #000;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    .cancel,
+    .log_in_btn,
+    .reg_btn,
+    .recovery_btn{
+        cursor: pointer;
+        width: 85px;
+        height: 35px;
+        background-color: #323235;
+        border: none;
+        color: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width:980px){
+    .all_forms{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .links{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .to_log_btn{
+        margin: 0 auto;
+        border-radius: 8px;
+        background-color: #8a8bca;
+        width: 15px;
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .log_out_btn{
+        display: none;
+        width: 15px;
+        padding: 8px;
+        border-radius: 8px;
+        font-size: 18px;
+    }
+    
+    .login_form, 
+    .registration_form,
+    .recovery_form{
+        display: none; 
+        margin: 20px auto 10px 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #8a8bca;
+        border-radius: 10px;
+        padding: 30px;
+    }
+    
+    .data_writer{
+        margin: 0 auto;
+        display: flexbox;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .labels{
+        text-align: left;
+        padding-left: 10%;
+    }
+    
+    .fields{
+       padding-left: 5%;
+    
+    }
+    
+    #auth_log, 
+    #auth_pwd,
+    #reg_log,
+    #reg_pwd,
+    #key_code,
+    #log,
+    #code,
+    #pwd{
+        border-radius: 8px;
+        border: 1px solid #000;
+        width: 170px;
+        height: 20px;
+        margin-bottom: 2,5px;
+    }
+    
+    .lb{ 
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+        margin-bottom: 12px;
+        color: #FFF;
+    
+    }
+    
+    h1{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 50px;
+    
+        text-align: center;
+        color: #FFF;
+    }
+    
+    .to_reg_btn,
+    .to_recovery_pwd{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        color: #001ea5;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    .to_reg_btn:hover,
+    .to_recovery_pwd:hover{
+        color: #000;
+        font-weight: 700;
+        font-size: 15px;
+    }
+    
+    .cancel,
+    .log_in_btn,
+    .reg_btn,
+    .recovery_btn{
+        cursor: pointer;
+        width: 85px;
+        height: 35px;
+        background-color: #323235;
+        border: none;
+        color: #fff;
+        padding: 4px;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 15px;
+        line-height: 20px;
+        text-align: center;
+    }
+}
+
+@media (max-width:490px){
+    .all_forms{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .links{
+        display: table;
+        margin: 0 auto;
+    }
+
+    .to_log_btn{
+        margin: 0 auto;
+        border-radius: 5px;
+        background-color: #8a8bca;
+        width: 10px;
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .log_out_btn{
+        display: none;
+        width: 10px;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 8px;
+    }
+    
+    .login_form, 
+    .registration_form,
+    .recovery_form{
+        display: none; 
+        margin: 20px auto 10px 10px;
+        text-align: center;
+        width: 100%;
+        background-color: #8a8bca;
+        border-radius: 10px;
+        padding: 10px;
+    }
+    
+    .data_writer{
+        display: flex;
+        text-align: center;
+        vertical-align: middle;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .labels{
+        text-align: left;
+        padding-left: 10%;
+    }
+    
+    .fields{
+       padding-left: 5%;
+    
+    }
+    
+    #auth_log, 
+    #auth_pwd,
+    #reg_log,
+    #reg_pwd,
+    #key_code,
+    #log,
+    #code,
+    #pwd{
+        border-radius: 8px;
+        border: 1px solid #000;
+        width: 100px;
+        height: 20px;
+        margin-bottom: 2,5px;
+    }
+    
+    .lb{ 
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 10px;
+        margin-bottom: 12px;
+        color: #FFF;
+    
+    }
+    
+    h1{
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 20px;
+        line-height: 50px;
+    
+        text-align: center;
+        color: #FFF;
+    }
+    
+    .to_reg_btn,
+    .to_recovery_pwd{
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        margin: 0;
+        padding: 0;
+        color: #001ea5;
+    
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 10px;
+    }
+    
+    .to_reg_btn:hover,
+    .to_recovery_pwd:hover{
+        color: #000;
+        font-weight: 700;
+        font-size: 10px;
+    }
+    
+    .cancel,
+    .log_in_btn,
+    .reg_btn,
+    .recovery_btn{
+        cursor: pointer;
+        width: 80px;
+        height: 30px;
+        background-color: #323235;
+        border: none;
+        color: #fff;
+        padding: 2px;
+        border-radius: 5px;
+        font-family: 'Montserrat';
+        font-style: normal;
+        font-weight: 800;
+        font-size: 10px;
+        line-height: 20px;
+        text-align: center;
+    }
 }
