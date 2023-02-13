@@ -221,7 +221,7 @@ function registration(reg_log, reg_pwd, key_code) {
 function log_in(auth_log, auth_pwd, reg_log, reg_pwd) {
     let flag = false;
     let is_admin_flag = 0;
-
+   
     let list_of_users = JSON.parse(localStorage.getItem("users"));
 
     for (const user of list_of_users) {
@@ -246,7 +246,7 @@ function log_in(auth_log, auth_pwd, reg_log, reg_pwd) {
 
 function recovery(log, code, pwd) {
     let flag = false;
-
+    localStorage.setItem("users", JSON.stringify(users));
     let list_of_users = JSON.parse(localStorage.getItem("users"));
 
     for (const user of list_of_users) {
