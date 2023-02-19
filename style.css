@@ -760,6 +760,19 @@ h1{
 }
 
 @media (max-width:490px){
+    
+    .second_header{
+        display: none;
+    }
+
+    .second_header_event{
+        display: none;
+    }
+
+    .second_header_event_blue_theme{
+        display: none;
+    }
+    
     .all_forms{
         display: table;
         margin: 0 auto;
