@@ -617,6 +617,14 @@ h1{
 }
 
 @media (max-width:980px){
+    .banner_form{
+        display: none;
+        height: 25%;
+    }
+    .item {
+        width: 30vw;
+        height: 17vh;
+    }
     .all_forms{
         display: table;
         margin: 0 auto;
@@ -759,7 +767,10 @@ h1{
     .banner_form{
         display: none;
         height: 25%;
-        padding-top: 50px;
+    }
+    .item {
+        width: 30vw;
+        height: 17vh;
     }
     .second_header{
         display: none;
