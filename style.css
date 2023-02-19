@@ -9,7 +9,6 @@ html, body {
     padding-top: 50px;
 }
   
-
 .banner_form{
     display: none;
     height: 50%;
@@ -215,9 +214,6 @@ h1{
     line-height: 20px;
     text-align: center;
 }
-
-
-
 
 
 /* event info */
@@ -760,7 +756,11 @@ h1{
 }
 
 @media (max-width:490px){
-    
+    .banner_form{
+        display: none;
+        height: 25%;
+        padding-top: 50px;
+    }
     .second_header{
         display: none;
     }
