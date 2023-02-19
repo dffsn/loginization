@@ -625,6 +625,17 @@ h1{
         width: 30vw;
         height: 17vh;
     }
+     .second_header{
+        display: none;
+    }
+
+    .second_header_event{
+        display: none;
+    }
+
+    .second_header_event_blue_theme{
+        display: none;
+    }
     .all_forms{
         display: table;
         margin: 0 auto;
