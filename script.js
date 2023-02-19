@@ -27,6 +27,9 @@ to_log_btn.addEventListener("click", auth_form_wrap);
 let log_out_btn = document.querySelector(".log_out_btn");
 log_out_btn.addEventListener("click", log_out);
 
+let cancel_btn = document.querySelector(".cancel");
+cancel_btn.addEventListener("click", cancel);
+
 let log_in_btn = document.querySelector(".log_in_btn");
 log_in_btn.addEventListener("click", getLogPass);
 
@@ -42,10 +45,157 @@ reg_btn.addEventListener("click", getLogPass);
 let recovery_btn = document.querySelector(".recovery_btn");
 recovery_btn.addEventListener("click", getLogPass);
 
+let banner_form = document.querySelector(".banner_form");
+
 document.addEventListener('submit', (e) => { 
     e.target.reset(); 
     e.preventDefault();
 });
+
+// img listeners
+let first_event = document.getElementById('first_banner');
+first_event.addEventListener('click', function (e){
+    add_first_event_info();
+});
+let second_event = document.getElementById('second_banner');
+second_event.addEventListener('click', function (e){
+    add_second_event_info();
+});
+let third_event = document.getElementById('third_banner');
+third_event.addEventListener('click', function (e){
+    add_third_event_info();
+});
+let fourth_event = document.getElementById('fourth_banner');
+fourth_event.addEventListener('click', function (e){
+    add_fourth_event_info();
+});
+
+//add info about event
+function add_first_event_info(){
+    let content = document.querySelector(".content");
+    banner_form.style.display = "none";
+    clear_content();
+    content.innerHTML = `<div>
+    <img class="img_header" src="img/big_sale.png" alt="" width="1000px">
+  </div>
+  <br>
+  <h1 class="header_event_blue_theme">BIG SALE</h1>
+  <div class="second_header">
+      <h2 class="second_header_event_blue_theme">LIMITED TIME OFFER AT 50%</h2>
+    </div>
+  <div class="event_content">
+    <p class="about_event">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eligendi voluptatem nesciunt dolor voluptatibus labore pariatur iste? Suscipit reprehenderit aliquid porro iusto nulla aspernatur, in quis modi dolorum iste facere, minus nisi fuga optio veniam!
+    </p>
+    <div class="shop_btn">
+      <a href="#" class="shop_now"> <span>SHOP NOW</span> </a>
+    </div>
+    <div class="contacts">
+      <h3 class="contacts_header">Our contacts</h3>
+      <ul class="contact">
+        <li><img class="contact_ico" src="img/twitter.png" alt=""></li>
+        <li><img class="contact_ico" src="img/facebook.png" alt=""></li>
+        <li><img class="contact_ico" src="img/inst.png" alt=""></li>
+        <li><img class="contact_ico" src="img/youtube.png" alt=""></li>
+      </ul>
+    </div>
+  </div>`;
+  cancel_btn.style.display = "inline";
+}
+
+function add_second_event_info(){
+    let content = document.querySelector(".content");
+    banner_form.style.display = "none";
+    clear_content();
+    content.innerHTML = `<div>
+    <img class="img_header" src="img/lorem_banner.png" alt="" width="1000px">
+  </div>
+  <br>
+  <h1 class="header_event">
+    LOREM IPSUM
+  </h1>
+  <div class="event_content">
+    <p class="about_event">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eligendi voluptatem nesciunt dolor voluptatibus labore pariatur iste? Suscipit reprehenderit aliquid porro iusto nulla aspernatur, in quis modi dolorum iste facere, minus nisi fuga optio veniam!
+    </p>
+    <div class="shop_btn">
+      <a href="#" class="shop_now"> <span>SHOP NOW</span> </a>
+    </div>
+    <div class="contacts">
+      <h3 class="contacts_header">Our contacts</h3>
+      <ul class="contact">
+        <li><img class="contact_ico" src="img/twitter.png" alt=""></li>
+        <li><img class="contact_ico" src="img/facebook.png" alt=""></li>
+        <li><img class="contact_ico" src="img/inst.png" alt=""></li>
+        <li><img class="contact_ico" src="img/youtube.png" alt=""></li>
+      </ul>
+    </div>
+  </div>`;
+  cancel_btn.style.display = "inline";
+}
+
+function add_third_event_info(){
+    let content = document.querySelector(".content");
+    banner_form.style.display = "none";
+    clear_content();
+    content.innerHTML = `<div>
+    <img class="img_header" src="img/mega_sale_first.png" alt="">
+  </div>
+  <br>
+  <h1 class="header_event">
+    <span class="first_part_header_event">MEGA</span> 
+    <span class="second_part_header_event">SALE</span>
+  </h1>
+  <div class="event_content">
+    <p class="about_event">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum eligendi voluptatem nesciunt dolor voluptatibus labore pariatur iste? Suscipit reprehenderit aliquid porro iusto nulla aspernatur, in quis modi dolorum iste facere, minus nisi fuga optio veniam!
+    </p>
+    <div class="shop_btn">
+      <a href="#" class="shop_now"> <span>SHOP NOW</span> </a>
+    </div>
+    <div class="contacts">
+      <h3 class="contacts_header">Our contacts</h3>
+      <ul class="contact">
+        <li><img class="contact_ico" src="img/twitter.png" alt=""></li>
+        <li><img class="contact_ico" src="img/facebook.png" alt=""></li>
+        <li><img class="contact_ico" src="img/inst.png" alt=""></li>
+        <li><img class="contact_ico" src="img/youtube.png" alt=""></li>
+      </ul>
+    </div>
+  </div>`;
+  cancel_btn.style.display = "inline";
+}
+
+function add_fourth_event_info(){
+    let content = document.querySelector(".content");
+    banner_form.style.display = "none";
+    clear_content();
+    content.innerHTML = `<div>
+    <img class="img_header" src="img/mega_sale_second.png" alt="">
+  </div>
+  <br>
+  <h1 class="header_event">
+    <span class="first_part_header_event">MEGA</span> 
+    <span class="second_part_header_event">SALE</span>
+  </h1>
+  <div class="second_header">
+      <h2 class="second_header_event">UP TO 50% OFF</h2>
+    </div>
+  <div class="event_content">
+    <p class="about_event">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Porro quos reiciendis at optio non deserunt quod dolorum, magnam delectus soluta, sit ipsam repellendus, sint eius voluptas praesentium atque. 
+    </p>
+    <div class="shop_btn">
+      <a href="#" class="shop_now"> <span>SHOP NOW</span> </a>
+    </div>
+    <div class="contacts">
+      <h3 class="contacts_header">Our contacts</h3>
+      <ul class="contact">
+        <li><img class="contact_ico" src="img/twitter.png" alt=""></li>
+        <li><img class="contact_ico" src="img/facebook.png" alt=""></li>
+        <li><img class="contact_ico" src="img/inst.png" alt=""></li>
+        <li><img class="contact_ico" src="img/youtube.png" alt=""></li>
+      </ul>
+    </div>
+  </div>`;
+  cancel_btn.style.display = "inline";
+}
 
 // wraper forms
 function auth_form_wrap() {
@@ -193,7 +343,11 @@ function log_out(){
 
     let to_log_btn = document.querySelector(".to_log_btn");
     to_log_btn.style.display = "inline";
+
+    let banners = document.querySelector(".banners");
+    banner_form.style.display = "none";
     clear_content();
+    cancel_btn.style.display = "none";
 }
 
 function registration(reg_log, reg_pwd, key_code) {
@@ -229,9 +383,9 @@ function log_in(auth_log, auth_pwd, reg_log, reg_pwd) {
         if ((user.login == auth_log && user.password == auth_pwd)||(user.login == reg_log && user.password == reg_pwd)) {
             flag = true;
             
-            is_admin_flag = user.is_admin;   
+            is_admin_flag = user.is_admin;  
+            anti_wrap_auth_form(); 
             add_content(is_admin_flag);
-            anti_wrap_auth_form();
             let to_log_btn = document.querySelector(".to_log_btn");
             to_log_btn.style.display = "none";
 
@@ -266,16 +420,23 @@ function recovery(log, code, pwd) {
     }
 }
 
+function cancel(){
+ clear_content();
+ cancel_btn.style.display = "none";
+ banner_form.style.display = "inline-block";
+}
+
 // add content
 function add_content(is_admin_flag) {
     clear_content();
     let content = document.querySelector(".content");
-
     if(is_admin_flag == 1){
-        content.innerHTML = `<img src="img/admin.png" alt="admin" Width="100px">`;
+        content.innerHTML = `Hello Admin! <br>`;
+        banner_form.style.display = "inline";
     }
     else if(is_admin_flag == 0){
-        content.innerHTML = `Hello User`;
+        content.innerHTML = `Hello User! <br>`;
+        banner_form.style.display = "inline";
     }   
 }
 
